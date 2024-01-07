@@ -6,6 +6,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as MediaLibrary from "expo-media-library";
 import { captureRef } from "react-native-view-shot";
 import domtoimage from "dom-to-image";
+// import * as SplashScreen from "expo-splash-screen";
 
 import Button from "./components/Button";
 import ImageViewer from "./components/ImageViewer";
@@ -86,6 +87,10 @@ export default function App() {
   if (status === null) {
     requestPermission();
   }
+
+  // delay hiding the splash screen for five seconds.
+  // SplashScreen.preventAutoHideAsync();
+  // setTimeout(SplashScreen.hideAsync, 5000);
 
   return (
     <GestureHandlerRootView style={styles.container}>
